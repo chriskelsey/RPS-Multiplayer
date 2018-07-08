@@ -33,6 +33,8 @@ $(document).ready(function() {
 
 
 $('#start-button').on('click', function(e) {
+  //prevent page refresh
+  e.preventDefault();
 
   var playerName = $("#player-name").val().trim();
 
@@ -63,24 +65,15 @@ $('#start-button').on('click', function(e) {
     $('.name').text(playerName);
     $('.player').text(playerCount);
     $('#pl' + playerCount + '> .card-header').text(playerName);
-
-  	//prevent page refresh
-	e.preventDefault();
 });
 
 $('button').on('click',function() {
-  var plnum = 0;
-  database.ref().on('value',function(snapshot) {
-    plnum = snapshot.val().player;
-    console.log(snapshot.val().player);
-  });
   if ($(this).attr('id') === 'rock') {
-    console.log(plnum);
-    $('#pl' + plnum).find('.card-title').addClass('fas fa-hand-rock').text('');
+    $('#pl' + playerCount).find('.card-title').addClass('fas fa-hand-rock').text('');
   } else if ($(this).attr('id') === 'paper') {
-    $('#pl' + plnum).find('.card-title').addClass('fas fa-hand-paper').text('');
+    $('#pl' + playerCount).find('.card-title').addClass('fas fa-hand-paper').text('');
   } else if ($(this).attr('id') === 'scissors'){
-    $('#pl' + plnum).find('.card-title').addClass('fas fa-hand-scissors').text('');
+    $('#pl' + playerCount).find('.card-title').addClass('fas fa-hand-scissors').text('');
   } else {
     return false;
   }
