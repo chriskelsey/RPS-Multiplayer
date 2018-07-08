@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+	<title>The Ultimate Rock Paper Scissors</title>
+
+	<meta charset="utf-8">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+	<!-- Font Awesome for the Icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+	<!-- Google fonts css -->
+	<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+
+	<!-- Website unique css -->
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	<div class="container mt-5">
+		<div class="row justify-content-center">
+			<h1 class="text-center display-4 mb-5">Rock, Paper, Scissors!</h1>
+		</div>
+		<div id="start-game" class="row justify-content-center">
+			<div class="col-lg-6 col-md-12">
+				<p>Enter a name below to start the game</p>
+				<div class="input-group mb-3">
+		  			<input id="player-name" type="text" class="form-control" placeholder="Pick a name" aria-label="Pick a name">
+		  			<div class="input-group-append">
+		    			<button id="start-button" class="btn" type="button">Start</button>
+		  			</div>
+				</div>
+			</div>
+		</div>
+		<div id="game">
+			<div class="row">
+				<div class="col-lg-3"></div>
+				<div class="col-lg-6 col-md-12 text-center">
+					<p>Hi <span class="name"></span>. You are player <span class="player"></span></p>
+					<button id="rock" class="btn mr-3" type="button">Rock</button>
+					<button id="paper" class="btn mr-3" type="button">Paper</button>
+					<button id="scissors" class="btn" type="button">Scissors</button>
+				</div>
+				<div class="col-lg-3"></div>
+			</div>
+			<div class="row mt-5">
+				<div class="col-md-4">
+					<div id="pl1" class="card">
+					  <div class="card-header text-center text-white">Chris</div>
+					  <div class="card-body">
+					    <h5 class="card-title">It's your turn!</h5>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<div id="pl2" class="card">
+					  <div class="card-header text-center text-white"></div>
+					  <div class="card-body">
+					    <h5 class="card-title"></h5>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+	<!-- Firebase -->
+  	<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Additional Scripts -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

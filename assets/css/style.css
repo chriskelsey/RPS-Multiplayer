@@ -1,0 +1,50 @@
+h1{
+  font-family: 'Bangers', cursive;
+  color: black;
+  text-shadow: 0 1px 0 #80399d,
+               0 2px 0 #6e3387,
+               0 3px 0 #56276b,
+               0 4px 0 #431e54,
+               0 5px 0 #341742,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+.card-header {
+  background-color:#8e44ad;
+  font-size: 150%;
+}
+
+
+.btn {
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #8e44ad;
+  border: 0;
+  border-bottom: 2px solid #80399d;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #80399d;
+  box-shadow: inset 0 -2px #80399d;
+}
+
+.btn:hover, .btn:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.fas {
+  font-size: 5em
+}
+
+.fas::before {
+  position: relative;
+  left: 50%;
+}
